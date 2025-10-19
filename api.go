@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/S3BzA/GoMathAPI/handlers"
+	"github.com/S3BzA/GoMathAPI/middleware"
 	"log"
 	"net/http"
 )
@@ -31,8 +32,8 @@ func (s *APIServer) Run() error {
 
 	server := http.Server{
 		Addr:    s.addr,
-		Handler: root_router,
+		Handler: middleware.Logging(root_router),
 	}
-	log.Printf("Server has started %s", s.addr)
+	log.Printf("Server started %s", s.addr)
 	return server.ListenAndServe()
 }

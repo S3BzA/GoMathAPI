@@ -37,7 +37,6 @@ func Sum(w http.ResponseWriter, r *http.Request) {
 	if werr := utils.WriteJSON(w, http.StatusOK, resultJSON); werr != nil {
 		log.Printf("response write error: %v", werr)
 	}
-	log.Printf("(%s)> Sum: %f",r.Host,numbers)
 }
 
 func Mul(w http.ResponseWriter, r *http.Request) {
@@ -68,7 +67,6 @@ func Mul(w http.ResponseWriter, r *http.Request) {
 	if werr := utils.WriteJSON(w, http.StatusOK, resultJSON); werr != nil {
 		log.Printf("response write error: %v", werr)
 	}
-	log.Printf("(%s)> Mul: %f",r.Host,numbers)
 }
 
 func Div(w http.ResponseWriter, r *http.Request) {
@@ -114,7 +112,6 @@ func Div(w http.ResponseWriter, r *http.Request) {
 	if werr := utils.WriteJSON(w, http.StatusOK, resultJSON); werr != nil {
 		log.Printf("response write error: %v", werr)
 	}
-	log.Printf("(%s)> Div: %f",r.Host,numbers)
 }
 
 func Pow(w http.ResponseWriter, r *http.Request) {
@@ -160,7 +157,6 @@ func Pow(w http.ResponseWriter, r *http.Request) {
 	if werr := utils.WriteJSON(w, http.StatusOK, resultJSON); werr != nil {
 		log.Printf("response write error: %v", werr)
 	}
-	log.Printf("(%s)> Pow: %f",r.Host,numbers)
 }
 
 func Mod(w http.ResponseWriter, r *http.Request) {
@@ -206,5 +202,4 @@ func Mod(w http.ResponseWriter, r *http.Request) {
 	if werr := utils.WriteJSON(w, http.StatusOK, resultJSON); werr != nil {
 		log.Printf("response write error: %v", werr)
 	}
-	log.Printf("(%s)> Mod: %v",r.Host,numbers)
 }

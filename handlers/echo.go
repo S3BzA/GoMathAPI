@@ -1,6 +1,8 @@
 package handlers
 
-import "net/http"
+import (
+	"net/http"
+)
 
 func Echo(w http.ResponseWriter, r *http.Request) {
 	str := r.PathValue("str")
