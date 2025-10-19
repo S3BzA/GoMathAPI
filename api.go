@@ -28,7 +28,14 @@ func (s *APIServer) Run() error {
 	mathematics.HandleFunc("GET /pow/{nums}", handlers.Pow)
 	mathematics.HandleFunc("GET /mod/{nums}", handlers.Mod)
 
+	crud := http.NewServeMux()
+	crud.HandleFunc("POST /create",handlers.Create)
+	crud.HandleFunc("GET /read",handlers.Read)
+	crud.HandleFunc("PUT /update",handlers.Update)
+	crud.HandleFunc("DELETE /create",handlers.Delete)
+
 	root_router.Handle("/math/", http.StripPrefix("/math", mathematics))
+	root_router.Handle("/crud/", http.StripPrefix("/crud", crud))
 
 	stack := middleware.CreateStack(
 		middleware.Logging,

@@ -19,3 +19,6 @@ CREATE TRIGGER set_timestamp
 BEFORE UPDATE ON api_users
 FOR EACH ROW
 EXECUTE FUNCTION update_timestamp();
+
+INSERT INTO api_users (username, email)
+VALUES ('admin', 'admin@example.com');
