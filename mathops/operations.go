@@ -1,24 +1,20 @@
 package mathops
 
-// Adds numbers and returns the sum
-func Add(numbers ...float64) (sum float64) {
+// Adds/subtracts numbers and returns the sum
+func Sum(numbers ...float64) (sum float64) {
 	for _, number := range numbers {
 		sum += number
 	}
 	return
 }
 
-// Subtracts numbers and returns the difference
-func Subtract(numbers ...float64) (difference float64) {
-	for _, number := range numbers {
-		difference -= number
-	}
-	return
-}
-
 // Multiplies numbers and returns the product
 func Multiply(numbers ...float64) (product float64) {
-	for _, number := range numbers {
+	if len(numbers) == 0 {
+		return
+	}
+	product = numbers[0]
+	for _, number := range numbers[1:] {
 		product *= number
 	}
 	return
