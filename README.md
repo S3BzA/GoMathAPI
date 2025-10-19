@@ -48,4 +48,4 @@ The `sum` and `mul` operations can take multiple operands at a time, while the o
 
 Interaction with a relational Database (SQLite/PostgreSQL).
 
-A simple API is cool and all, but CRUD (CREATE, READ, UPDATE, DELETE) operations are a core part of most web applications. Implementing database interactions will help you understand how to persist data and manage state in your applications.
+A simple API is cool and all, but CRUD (CREATE, READ, UPDATE, DELETE) operations are a core part of most web applications. Implementing database interactions helps to understand how to persist data and manage state securely in your applications.
