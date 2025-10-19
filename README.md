@@ -25,6 +25,17 @@ A big thank you to [@elliotminns](https://github.com/elliottminns) (Dreams of Co
     -   Logging
     -   Authentication (API Key based)
 
+## Usage
+For the mathematical operations, you can send a GET request to the `/math/{operation}` endpoint with the required query parameters. For example, to add two numbers, you can send a GET request to `/math/add`. For all operations you submit operands like so, using comma-separated value:
+```
+/math/sum/5,-2,3
+/math/mul/5,10
+/math/div/10,2
+/math/exp/2,3
+/math/mod/10,3
+```
+The `sum` and `mul` operations can take multiple operands at a time, while the others take exactly two.  
+
 ## Bonus Features (WIP or Coming Soon)
 
 ### Database Usage
