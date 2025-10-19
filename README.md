@@ -12,29 +12,35 @@ Why math? Because it is simple and easy to understand. You don't need to know an
 
 A big thank you to [@elliotminns](https://github.com/elliottminns) (Dreams of Code) for his [video](https://youtu.be/H7tbjKFSg58?si=hep2W0kGxAUFcZ--) which inspired me to create this project.
 
-## Features
+## Design Features
 
--   Summation
-    -   Addition
-    -   Subtraction
--   Multiplication
--   Division
--   Exponentiation
--   Modulo
 -   Middlewares
     -   Logging
     -   Authentication (API Key based)
 
+## Application Features
+
+-   Summation (/sum)
+    -   Addition
+    -   Subtraction
+-   Multiplication (/mul)
+-   Division (/div)
+-   Exponentiation (/pow)
+-   Modulo (/mod)
+
 ## Usage
-For the mathematical operations, you can send a GET request to the `/math/{operation}` endpoint with the required query parameters. For example, to add two numbers, you can send a GET request to `/math/add`. For all operations you submit operands like so, using comma-separated value:
+
+For the mathematical operations, you can send a GET request to the `/math/{operation}` endpoint with the required query parameters. For example, to add two numbers, you can send a GET request to `/math/add`. For all operations you submit operands like so, using comma-separated values:
+
 ```
 /math/sum/5,-2,3
 /math/mul/5,10
 /math/div/10,2
-/math/exp/2,3
+/math/pow/2,3
 /math/mod/10,3
 ```
-The `sum` and `mul` operations can take multiple operands at a time, while the others take exactly two.  
+
+The `sum` and `mul` operations can take multiple operands at a time, while the others take exactly two.
 
 ## Bonus Features (WIP or Coming Soon)
 
