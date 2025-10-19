@@ -30,9 +30,14 @@ func (s *APIServer) Run() error {
 
 	root_router.Handle("/math/", http.StripPrefix("/math", mathematics))
 
+	stack := middleware.CreateStack(
+		middleware.Logging,
+		middleware.Authentication,
+	)
+
 	server := http.Server{
 		Addr:    s.addr,
-		Handler: middleware.Logging(root_router),
+		Handler: stack(root_router),
 	}
 	log.Printf("Server started %s", s.addr)
 	return server.ListenAndServe()
