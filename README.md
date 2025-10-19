@@ -4,7 +4,7 @@ Simple Go API that implements mathematical operations (no frameworks).
 
 ## Introduction
 
-Even if the dev life isn't for you, as a cybersecurity enthusiast you should know at least the basics of web development. This project is a simple Go API that implements mathematical operations without using any frameworks. It is intended to help you understand how web servers work and how to create your own APIs.
+Even if the dev life isn't for you, as a cybersecurity enthusiast you should know at least the basics of web development. This project is a simple Go API that implements mathematical operations without using any frameworks. It also helps to understand how web servers work and how to create API services.
 
 Why Go? It is simple, fast and the built-in `net/http` package makes it easy to create APIs without worrying about any fancy frameworks.
 
