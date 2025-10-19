@@ -30,9 +30,9 @@ func (s *APIServer) Run() error {
 
 	crud := http.NewServeMux()
 	crud.HandleFunc("POST /create",handlers.Create)
-	crud.HandleFunc("GET /read",handlers.Read)
-	crud.HandleFunc("PUT /update",handlers.Update)
-	crud.HandleFunc("DELETE /create",handlers.Delete)
+	crud.HandleFunc("GET /read/{id}",handlers.Read)
+	crud.HandleFunc("PUT /update/{id}",handlers.Update)
+	crud.HandleFunc("DELETE /delete/{id}",handlers.Delete)
 
 	root_router.Handle("/math/", http.StripPrefix("/math", mathematics))
 	root_router.Handle("/crud/", http.StripPrefix("/crud", crud))
