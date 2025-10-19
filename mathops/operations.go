@@ -1,4 +1,4 @@
-package math
+package mathops
 
 // Adds numbers and returns the sum
 func Add(numbers ...float64) (sum float64) {
@@ -27,7 +27,7 @@ func Multiply(numbers ...float64) (product float64) {
 // Calculates the nth power (int) of the base number (float) and returns the power
 func Power(base float64, exponent int64) (product float64) {
 	product = 1
-	
+
 	if exponent == 0 {
 		return
 	}
@@ -46,6 +46,9 @@ func Power(base float64, exponent int64) (product float64) {
 
 // Divides a numerator by a denominator and returns the quotient
 func Divide(numerator, denominator float64) (quotient float64) {
+	if denominator == 0 {
+		return 0
+	}
 	quotient = numerator / denominator
 	return
 }
